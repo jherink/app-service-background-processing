@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "c337543c-0d7d-4ac5-b975-d4393734468e",
+		"name": "Background Job Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/demo/helloworld",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"demo",
+						"helloworld"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Long Running Sync",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/demo/longrunningsync",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"demo",
+						"longrunningsync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Long Running Async",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"StatusURL\", pm.response.headers.get(\"Location\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/demo/longrunningasync",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"demo",
+						"longrunningasync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Long Running Task Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{StatusURL}}",
+					"host": [
+						"{{StatusURL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "StatusURL",
+			"value": ""
+		}
+	]
+}

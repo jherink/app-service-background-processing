@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{F68229AF-A11B-4C8B-8A92-06F95618A777}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/DemoController.cs">
+    <Files>
+      <File FileName="Controllers/BaseController.cs" Line="66" Column="24" />
+      <File FileName="Controllers/DemoController.cs" Line="23" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="app-service-background-processing" expanded="True">
+            <Node name="app-service-background-processing" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="DemoController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.app-service-background-processing PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
